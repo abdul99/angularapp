@@ -1,0 +1,30 @@
+<html ng-app="countryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js JSON Fetching Example</title>
+     
+	
+	  
+  </head>
+  <body ng-controller="CountryController as ctr">
+	<h2>Angular.js JSON Fetching Example</h2>
+    <table>
+      <tr>
+        <th>Code</th>
+		<th>Country</th>
+        <th>Population</th>
+      </tr>
+      <tr ng-repeat="country in ctr.countries">
+        <td>{{country.code}}</td>
+		<td>{{country.name}}</td>
+        <td>{{country.population}}</td>
+      </tr>
+    </table>
+	
+	
+	<script src="../bower_components/angular/angular.js"></script>
+    <script src="scripts/app.js"> </script> 
+	<script src="scripts/services/dataservice.js"> </script>
+    <script src="scripts/controllers/countrycontroller.js"> </script> 
+  </body>
+</html>
